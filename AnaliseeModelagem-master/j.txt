@@ -1,0 +1,75 @@
+Exercício :
+Em grupo de 4 alunos (2 desenvolvedores e 2 usuários), simular uma reunião para especificação de requisitos de um Sistema de Controle de Biblioteca (use seus conhecimentos sobre o processo da Biblioteca para fazer o papel de usuário). Ao término da “reunião”, crie um documento com: 
+
+• Nome do sistema 
+• Áreas envolvidas 
+• Objetivos do sistema
+ • Restrições 
+• Descrição funcional
+
+ Leia, interprete a descrição do caso de uso abaixo e complemente a sua especificação através de um Diagrama de Atividades
+
+Projeto: Controle de Cursos
+
+Nome: Manter Aluno
+Descrição: Este caso de uso permite a inclusão, exclusão, alteração
+e consulta de alunos, pela atendente
+Ator Principal: Aluno
+Ator Secundário: Atendente
+Pré-condição: A atendente deverá estar devidamente identificada
+pelo sistema.
+
+Fluxo Principal:
+1. A Atendente informa o código do aluno [A1]
+2. A Atendente solicita a busca
+3. O sistema pesquisa os dados do aluno
+4. O sistema exibe os dados do aluno [A2]
+5. A Atendente edita os dados do aluno [A3]
+6. A Atendente solicita a gravação dos dados
+7. O sistema valida os dados informados
+8. O sistema grava os dados do aluno [A4]
+9. Fim do caso de uso
+
+Fluxos Alternativos:
+A1. Novo Aluno
+1. A Atendente solicita a inclusão de um novo aluno
+2. O sistema solicita os dados do novo aluno
+3. A Atendente informa os dados do aluno
+4. Vai para o passo 6 do fluxo principal
+
+A2. Aluno não encontrado
+1. O sistema informa a situação à atendente
+2. Vai para o passo 1 do Fluxo Principal 
+
+A3. Exclusão de Aluno
+1. Atendente solicita exclusão do aluno
+2. O sistema solicita confirmação da exclusão
+3. [se confirmação positiva] Sistema exclui aluno
+4. Vai para o passo 9 do fluxo principal.
+
+
+A4. Dados inválidos
+1. Se algum dado do aluno estiver em desacordo com as regras de
+validações e restrições, o sistema informa situação à Atendente
+2. Vai para o passo 5 do fluxo principal
+
+Pós-condições: Os dados são incluídos, alterados ou excluídos
+conforme solicitação do aluno
+
+Restrições e Validações:
+1. Nenhum campo poderá ser deixado em branco
+2. O campo CPF deverá ser preenchido somente com números
+3. O ano de nascimento deverá ser informado com 4 dígitos
+
+******************************************************************
+
+DESCRIÇÃO DE UMA REGRA DE NEGÓCIO:
+
+¢ A nota de um aluno em uma disciplina (um valor de 0 a 10) é obtida pela média de duas avaliações durante
+o semestre, A1 e A2, ou pela freqüência nas aulas.
+¢ Se o aluno obtiver nota maior ou igual a 7.0 (sete),será aprovado.
+¢ Se o aluno obtiver nota maior ou igual a 5.0 (cinco) emenor que 7.0 (sete), deverá fazer a avaliação final.
+¢ Se o aluno obtiver nota menor que 5.0 (cinco) seráreprovado.
+¢ Se o aluno obtiver uma freqüência menor que 75% emuma turma, será automaticamente reprovado.
+¢ Após a prova final, o aluno será considerado aprovado,se sua média final for maior ou igual a 6.0 (seis), caso
+contrário, será reprovado.
